@@ -1,0 +1,68 @@
+[
+  {
+    "artist": "Phoebe Bridgers",
+    "opener": "Lucy Dacus",
+    "date": "11/11/2019",
+    "doors": "8:00PM",
+    "show": "9:00PM",
+    "price": 15,
+    "tickets": 2,
+    "maxSize": 100,
+    "code": "pheb"
+  },
+  {
+    "artist": "Big Theif",
+    "opener": "Julien Baker",
+    "date": "11/12/2019",
+    "doors": "8:00PM",
+    "show": "9:00PM",
+    "price": 20,
+    "tickets": 8,
+    "maxSize": 80,
+    "code": "jbbt"
+  },
+  {
+    "artist": "Coulter Wall",
+    "opener": "John Moreland",
+    "date": "11/13/2019",
+    "doors": "6:30PM",
+    "show": "7:00PM",
+    "price": 25,
+    "tickets": "SOLD OUT",
+    "maxSize": 40,
+    "code": "cwjm"
+  },
+  {
+    "artist": "Sharon Van Etten",
+    "opener": "The Antlers",
+    "date": "11/14/2019",
+    "doors": "8:30PM",
+    "show": "9:00PM",
+    "price": 10,
+    "tickets": 35,
+    "maxSize": 80,
+    "code": "shve"
+  },
+  {
+    "artist": "Pedro The Lion",
+    "opener": "Marie/Lepanto",
+    "date": "11/15/2019",
+    "doors": "9:00PM",
+    "show": "10:00PM",
+    "price": 10,
+    "tickets": 41,
+    "maxSize": 80,
+    "code": "ptln"
+  },
+  {
+    "artist": "The National",
+    "opener": "Daughter",
+    "date": "11/16/2019",
+    "doors": "9:00PM",
+    "show": "10:00PM",
+    "price": 30,
+    "tickets": 22,
+    "maxSize": 100,
+    "code": "ntnl"
+  }
+]
