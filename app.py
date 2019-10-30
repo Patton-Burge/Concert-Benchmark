@@ -15,51 +15,25 @@ def get_shows():
 
 def ticket_maker(shows, tickets, desired_show, name):
     for show in shows:
+        s = "{:=^40}\n".format("=")
+        s += "]" + "THE JEFFERSON".center(38, " ") + "[\n"
+        s += f"]{'FEATURING...'.center(38, ' ')}[\n"
+        s += "]" + "".center(38, " ") + "[\n"
+        s += "]" + f"{show.get('artist')}".upper().center(38, " ") + "[\n"
+        s += "]" + f"With {show.get('opener')}".center(38, " ") + "[\n"
+        s += "]" + f"{show.get('date')}".center(38, " ") + "[\n"
+        s += (
+            "]"
+            + f"Doors: {show.get('doors')}, Show: {show.get('show')}".center(38, " ")
+            + "[\n"
+        )
+        s += "]" + "".center(38, " ") + "[\n"
+        s += "]" + f"Admit: {tickets}, Code: {show.get('code')}".center(38, " ") + "[\n"
+        s += "{:=^40}".format("=")
+        print(s)
         if show.get("artist") == desired_show:
             with open(TICKET_FILE, "w") as file:
-                file.write(
-                    "{:=^40}".format("=")
-                    + "\n"
-                    + "]"
-                    + "THE JEFFERSON".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + "FEATURING...".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + "".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + f"{show.get('artist')}".upper().center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + f"With {show.get('opener')}".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + f"{show.get('date')}".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + f"Doors: {show.get('doors')}, Show: {show.get('show')}".center(
-                        38, " "
-                    )
-                    + "["
-                    + "\n"
-                    + "]"
-                    + "".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "]"
-                    + f"Admit: {tickets}, Code: {show.get('code')}".center(38, " ")
-                    + "["
-                    + "\n"
-                    + "{:=^40}".format("=")
-                )
+                file.write(s)
 
 
 def save_to_all(shows, tickets, desired_show, name):
@@ -84,6 +58,7 @@ def save_to_all(shows, tickets, desired_show, name):
     with open(TRANSACTIONS_FILE, "w") as transaction_file:
         transaction_file.write("".join(rest))
     ticket_maker(shows, tickets, desired_show, name)
+    quit()
 
 
 def make_purchase(shows, tickets, desired_show, name):
@@ -98,7 +73,7 @@ def check_tickets(shows, tickets, desired_show, name):
         if show.get("artist") == desired_show:
             if show["tickets"] == "SOLD OUT":
                 print("Sorry that show is sold")
-                quit()
+                main()
             elif show.get("tickets") - tickets >= 0:
                 print("You may make this purchase")
                 make_purchase(shows, tickets, desired_show, name)
@@ -106,7 +81,7 @@ def check_tickets(shows, tickets, desired_show, name):
                 print(f"No You can only buy {show.get('tickets')} tickets")
                 print("Please ReRun Program!")
                 sleep(2)
-                quit()
+                main()
 
 
 def proccess_begin(shows, tickets, name):

@@ -3,3 +3,4 @@ Sean Anthony, Phoebe Bridgers, pheb, 2, $30.00, $2.10, 2019-10-29 18:08:31.91247
 D�mi Anthony, Big Theif, jbbt, 4, $80.00, $5.60, 2019-10-29 18:09:50.089703
 Patton Burge, Pedro The Lion, ptln, 3, $30.00, $2.10, 2019-10-30 15:20:32.869955
 Brock Burge, Pedro The Lion, ptln, 3, $30.00, $2.10, 2019-10-30 15:29:26.223394
+Brock, Pedro The Lion, ptln, 2, $20.00, $1.40, 2019-10-30 15:55:37.549072
